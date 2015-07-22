@@ -15,7 +15,7 @@
  */
 
 html {
-	background-color: #171922;
+	background-color: ##1E222D;
 	margin: 0;
 }
 
@@ -42,4 +42,9 @@ body {
 table {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#cheque-image {
+	width: 100%;
+	height: auto;
 }

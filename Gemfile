@@ -26,6 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Bundle rmagick for image creation
 gem 'rmagick'
 
+# Bunle Humanize for turning number into readable words
+gem 'humanize'
+
+# Bundle filterific for table filters
+# gem 'filterrific'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

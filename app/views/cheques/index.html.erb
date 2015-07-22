@@ -12,18 +12,21 @@
       <th>Name</th>
       <th>Date</th>
       <th>Value</th>
+      <th><%= button_to("Clear Filters", cheques_path,
+                      method: :get) %></th>
   </tr>
-
-  <% @cheques.each do |cheque| %>
+  <% for @cheque in @cheques %>
     <tr>
-      <td><%= cheque.name %></td>
-      <td><%= cheque.date %></td>
-      <td><%= cheque.nominal_value %></td>
-      <td><%= button_to("Show", cheque_path(cheque), 
+      <td><%= link_to @cheque.name, cheques_path(:name => @cheque.name) %></td>
+      <td><%= @cheque.date %></td>
+      <td><%= @cheque.nominal_value %></td>
+      <td><%= button_to("Show", cheque_path(@cheque),
                       method: :get) %></td>
-      <td><%= button_to("Delete", cheque_path(cheque),
+      <td><%= button_to("Delete", cheque_path(@cheque),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} ) %></td>
     </tr>
   <% end %>
 </table>
+
+
