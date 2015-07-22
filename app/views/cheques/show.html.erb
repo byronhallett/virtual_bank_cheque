@@ -1,0 +1,22 @@
+<h2>Virtual Cheque</h2>
+
+<%= button_to("Back", cheques_path, :method => "get") %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @cheque.name %></td>
+      <td><%= @cheque.date %></td>
+      <td><%= @cheque.nominal_value %></td>
+    </tr>
+  </tbody>
+</table>
+
+<% @red %>
