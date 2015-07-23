@@ -1,25 +1,30 @@
-<h1>VIRTUAL CHEQUE</h1>
-<h2>List of old cheques</h2>
+<div class='banner'>
+  <h1>VIRTUAL CHEQUE</h1>
+</div>
 
 <p>
+<!-- Will be uncommented once users are implimented -->
 <!-- <%= button_to("Back", login_index_path, :method => "get") %> -->
 </p>
-<p>
+<h2>Generate New Cheque:</h2>
 <%= button_to("Create New Cheque",  new_cheque_path, :method => 'get') %>
-</p>
+&nbsp;
+<h2>Previously Generated Cheques:</h2>
+<p>Click on name to filter list</p>
 <table>
   <tr>
       <th>Name</th>
       <th>Date</th>
       <th>Value</th>
-      <th><%= button_to("Clear Filters", cheques_path,
-                      method: :get) %></th>
+      <th colspan='2'><%= button_to("Clear Filters", cheques_path,
+                        method: :get) %></th>
   </tr>
   <% for @cheque in @cheques %>
     <tr>
       <td><%= link_to @cheque.name, cheques_path(:name => @cheque.name) %></td>
       <td><%= @cheque.date %></td>
-      <td><%= @cheque.nominal_value %></td>
+      <td> $<%= number_with_delimiter(
+              number_with_precision(@cheque.nominal_value, precision: 2)) %></td>
       <td><%= button_to("Show", cheque_path(@cheque),
                       method: :get) %></td>
       <td><%= button_to("Delete", cheque_path(@cheque),

@@ -1,5 +1,10 @@
+<div class='banner'>
+  <h1>VIRTUAL CHEQUE</h1>
+</div>
+
 <h2>New Cheque</h2>
 
+<!-- Using rails default form builder below -->
 <%= form_for :cheque, url: cheques_path do |f| %>
   <p>
     <%= f.label :name %><br>
@@ -15,6 +20,6 @@
   </p>
   <p>
     <%= f.submit "Create Cheque"%>
-    <%= button_to("Back", cheques_path)%>
+    <%= link_to 'Cancel', cheques_path%>
   </p>
 <% end %>
