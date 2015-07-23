@@ -48,6 +48,8 @@ class ChequesController < ApplicationController
 	# TODO: Replace statically sized labels with dynamic font size to fit line
 	# TODO: Add an initial resize to 1000 x something pixels to universalise
 	# the below translations
+	# TODO: change the temp save method for the image, since simulatenous requests might
+	# result in mixup of result images
 	private
 		def drawAndSaveCheque (name, date, value)
 			@chequeImage = ImageList.new('app/assets/images/cheque.png')
