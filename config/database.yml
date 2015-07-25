@@ -16,7 +16,7 @@ development:
   <<: *default
   encoding: utf8
   reconnect: false
-  database: virtual_banK_cheque_development
+  database: virtual_bank_cheque_development
   username: root
   password: 
 
@@ -31,7 +31,7 @@ test:
   <<: *default
   encoding: utf8
   reconnect: false
-  database: virtual_banK_cheque_test
+  database: virtual_bank_cheque_test
   username: root
   password: 
   
@@ -42,6 +42,6 @@ production:
   <<: *default
   encoding: utf8
   reconnect: false
-  database: virtual_banK_cheque_production
-  username: root
-  password: katika10
+	database: ENV['DATABASE_URL']
+  username: ENV['DATABASE_USERNAME']
+  password: ENV['DATABASE_PASSWORDs']
