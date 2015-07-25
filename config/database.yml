@@ -41,6 +41,6 @@ production:
   <<: *default
   encoding: utf8
   reconnect: false
-  database: heroku_de314c1e77b0a80
+  database: <%= ENV['CLEARDB_DATABASE_URL'] %>
   username: b7163ed24d8414
   password: d1b7efc4
