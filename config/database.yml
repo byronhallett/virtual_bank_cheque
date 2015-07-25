@@ -41,6 +41,6 @@ production:
   <<: *default
   encoding: utf8
   reconnect: false
-  database: mysql://b7163ed24d8414:d1b7efc4@us-cdbr-iron-east-02.cleardb.net/heroku_de314c1e77b0a80?reconnect=true
+  database: heroku_de314c1e77b0a80
   username: b7163ed24d8414
   password: d1b7efc4
