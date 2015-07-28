@@ -1,28 +1,13 @@
-== README
+== Virtual Bank Cheque
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple ruby on rails app for the generation of virtual bank cheques.
+Uses ImageMagick to annotate a standard asset server-side, 
+adding user specified name, date and dollar amount.
 
-Things you may want to cover:
+Saves previously generated cheques by value in MySQL for later re-generation. 
 
-* Ruby version
+Working copy can be found at https://virtual-cheque.herokuapp.com/cheques?
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+TODO:
+* Dynamically resize cheque font based on string length
+* Addition of user accounts: User table/model, 'created_by' column to cheque model, restrict table view to current user by session variable
