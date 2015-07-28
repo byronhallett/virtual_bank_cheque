@@ -6,7 +6,7 @@ adding user specified name, date and dollar amount.
 
 Saves previously generated cheques by value in MySQL for later re-generation. 
 
-Working copy can be found at https://virtual-cheque.herokuapp.com/cheques?
+Working copy can be found at https://virtual-cheque.herokuapp.com/cheques
 
 TODO:
 * Dynamically resize cheque font based on string length
